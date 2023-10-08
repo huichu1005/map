@@ -30,4 +30,7 @@ The analysis page primarily showcases our progression from the initial raw data,
 
 Reference materials include data sources, websites and papers.
 
+## Analysis process code
+Regarding our analysis process, the relevant programs will be placed in ```/AnalysisProcess```.
+
 
