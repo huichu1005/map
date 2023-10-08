@@ -15,14 +15,19 @@ click directly on the ```index.html``` file.
 
 ## Different pages
 
-### 1. Environment variables setting
+### 1. Interactive map
+This is the main page. The interactive map includes layer design, which are 2 basemaps ( OpenStreetMap & Satellite ), 3 research analysis layers ( NDVI, NDWI & NDMI ), the final 2 band results ( 381-2492 band z score & 700-1400nm z score ) and 2 optional layers ( hotspots & Cape area ).
 
-- In `/backend` directory, create a file named `.env`
-- Add some lines in `.env`
-  ```bash
-  PORT=8000
-  MONGO_URL=<your mongodb URL>
-  ```
+### 2. Introduction
 
+The introduction page mainly presents the EMIT data used and our main research area - the Cape area.
+
+### 3. Analysis
+
+The analysis page primarily showcases our progression from the initial raw data, through the pre-processing steps, to the methodologies we employ, ultimately culminating in the presentation of our results.
+
+### 4. Reference
+
+Reference materials include data sources, websites and papers.
 
 
