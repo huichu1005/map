@@ -4,7 +4,7 @@ This website has been developed for the 2023 NASA Space Apps Challenge, under th
 
 The website is divided into four main sections, including an **interactive map**, an **introduction**, an **analysis**, and a **reference** page.
 
-Team Member: HUI-CHU Chen, YUNG-TSAI LAI, HSIANG TUAN, TZU-WEI YANG
+Team Member: HUI-CHU CHEN, YUNG-TSAI LAI, HSIANG TUAN, TZU-WEI YANG
 
 ## Run the project
 ### Publish version
