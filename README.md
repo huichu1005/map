@@ -35,4 +35,7 @@ Reference materials include data sources, websites and papers.
 ## Analysis process code
 Regarding our analysis process, the relevant programs will be placed in ```/AnalysisProcess```.
 
+* ```emit_tools.py``` is the module provided by NASA for orthophoto processing.
+
+* ```Demo-checkpoint.ipynb``` is the code for our data analysis.
 
