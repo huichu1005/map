@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../image/cape.jpg" type="image/x-icon">
+    <link rel="icon" href="../image/plants.png" type="image/x-icon">
     <script src="../modules/jquery.min.js"></script>
     <link rel="stylesheet" href="../index.css">
     <script src="../modules/tailwind.css"></script>
@@ -32,7 +32,7 @@
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
-            <img class="h-8 w-auto" src="../image/cape.jpg" alt="Logo">
+            <img class="h-8 w-auto" src="../image/plants.png" alt="Logo">
             <span class="text-white text-lg font-bold font-italic pl-4">Bio-Hotspots</span>
           </div>
           <div class="hidden sm:ml-6 sm:block">
@@ -66,46 +66,48 @@
 
       <h1 class="display-6 mt-4 mb-2">Method</h1>
       <div class="clearfix mt-2 ml-2 mr-2">
-        <h1 class="custom-font-size mb-1"><li>NVDI</li></h1>
+        <p class="text-justify mb-1">We start by downloading the hyperspectral map from NASA's EMIT mission official website and then perform orthorectification. Afterward, we normalize the data using various indices, such as NDVI.</p>
+        <h1 class="custom-font-size mb-1"><li>NDVI</li></h1>
         <div class="pl-5">
-          <img src="../image/EMIT.jpg" class="col-md-6 float-md-end mb-3 ms-md-3 rounded" alt="EMIT Introduction" title="attribution: NASA">
+          <img src="../image/EMIT.jpg" class="col-md-6 float-md-center mb-3 ms-md-3 rounded" alt="EMIT Introduction" title="attribution: NASA">
       
-          <p class="text-justify">
-            EMIT (Earth Surface Mineral Dust Source Investigation) is a NASA mission that aims to measure the mineral composition of dust sources on Earth's surface. It seeks to understand how these mineral dust particles affect the Earth's environment, particularly their heating and cooling effects through radiative forcing. The mission uses remote sensing and satellite technology to gather critical data for climate research and environmental science.
+          <p class="text-justify font-bold">
+            Normalized Difference Vegetation Index (NDVI):
           </p>
-          <P class="pt-2">
-            There are two main objectives: 
-          </P>
-          <li class="pl-2 text-justify">To deliver a new improved assessment of the heating and cooling effects of mineral dust in the Earth’s atmosphere.</li>
-          <li class="pl-2 text-justify">To predict how future climate scenarios might change the amount and type of mineral dust emitted into the Earth’s atmosphere.</li>
+          <p class="text-justify">
+            NDVI is closely linked to the presence of vegetation. Elevated NDVI values indicate regions that exhibit greater reflection in the near-infrared spectrum. Increased near-infrared reflectance is indicative of more abundant plant growth.
+          </p>
+          <p class="text-justify">
+            We use NDVI <span class="font-italic">((842nm-665nm)/(842nm+665nm)) < 0.35</span> to remove low vegetation area.
+          </p>
         </div>
 
-        <h1 class="custom-font-size mb-1 mt-3"><li>Water</li></h1>
+        <h1 class="custom-font-size mb-1 mt-3"><li>NDWI</li></h1>
         <div class="pl-5">
-          <img src="../image/EMIT.jpg" class="col-md-6 float-md-end mb-3 ms-md-3 rounded" alt="EMIT Introduction" title="attribution: NASA">
-      
-          <p class="text-justify">
-            EMIT (Earth Surface Mineral Dust Source Investigation) is a NASA mission that aims to measure the mineral composition of dust sources on Earth's surface. It seeks to understand how these mineral dust particles affect the Earth's environment, particularly their heating and cooling effects through radiative forcing. The mission uses remote sensing and satellite technology to gather critical data for climate research and environmental science.
+          <img src="../image/EMIT.jpg" class="col-md-6 float-md-center mb-3 ms-md-3 rounded" alt="EMIT Introduction" title="attribution: NASA">
+          <p class="text-justify font-bold">
+            Normalized Difference Water Index (NDWI):
           </p>
-          <P class="pt-2">
-            There are two main objectives: 
-          </P>
-          <li class="pl-2 text-justify">To deliver a new improved assessment of the heating and cooling effects of mineral dust in the Earth’s atmosphere.</li>
-          <li class="pl-2 text-justify">To predict how future climate scenarios might change the amount and type of mineral dust emitted into the Earth’s atmosphere.</li>
+          <p class="text-justify">
+            NDWI utilizes the green and near-infrared bands of remote sensing imagery and is particularly responsive to the presence of water area.
+          </p>
+          <p class="text-justify">
+            We use NDWI <span class="font-italic">((560nm -842nm)/(560nm +842nm)) > 0 </span> to remove water area.
+          </p>
         </div>
 
-        <h1 class="custom-font-size mb-1 mt-3"><li>Farm</li></h1>
+        <h1 class="custom-font-size mb-1 mt-3"><li>NDMI</li></h1>
         <div class="pl-5">
-          <img src="../image/EMIT.jpg" class="col-md-6 float-md-end mb-3 ms-md-3 rounded" alt="EMIT Introduction" title="attribution: NASA">
-      
-          <p class="text-justify">
-            EMIT (Earth Surface Mineral Dust Source Investigation) is a NASA mission that aims to measure the mineral composition of dust sources on Earth's surface. It seeks to understand how these mineral dust particles affect the Earth's environment, particularly their heating and cooling effects through radiative forcing. The mission uses remote sensing and satellite technology to gather critical data for climate research and environmental science.
+          <img src="../image/EMIT.jpg" class="col-md-6 float-md-center mb-3 ms-md-3 rounded" alt="EMIT Introduction" title="attribution: NASA">
+          <p class="text-justify font-bold">
+            Normalized Difference Moisture Index (NDMI):
           </p>
-          <P class="pt-2">
-            There are two main objectives: 
-          </P>
-          <li class="pl-2 text-justify">To deliver a new improved assessment of the heating and cooling effects of mineral dust in the Earth’s atmosphere.</li>
-          <li class="pl-2 text-justify">To predict how future climate scenarios might change the amount and type of mineral dust emitted into the Earth’s atmosphere.</li>
+          <p class="text-justify">
+            NDMI is calculated from NIR and SWIR values. It is sensitive to water content in  vegetation.
+          </p>
+          <p class="text-justify">
+            We use NDMI <span class="font-italic">((842nm-1610nm)/(842nm+1610nm)) > 0.2 </span> to remove farm because natural vegetation is drier than agricultural land in the Cape of South Africa.
+          </p>
         </div>
       </div>
 
